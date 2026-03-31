@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML - Webdev Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 600: '#2563eb', 700: '#1d4ed8' } } }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans h-screen flex flex-col overflow-hidden">
+    <!-- Navbar Compact -->
+    <nav class="bg-white border-b border-slate-200 shrink-0 h-16 flex items-center px-4 justify-between z-50 relative shadow-sm">
+        <div class="flex items-center gap-4">
+            <a href="course.html" class="text-slate-500 hover:text-primary-600 transition flex items-center gap-2 text-sm font-medium bg-slate-100 px-3 py-1.5 rounded-lg">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                Kembali ke Silabus
+            </a>
+            <span class="h-6 w-px bg-slate-300 hidden md:block"></span>
+            <span class="font-bold text-slate-800 hidden md:block">Modul 1: HTML Dasar</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-full bg-slate-200 rounded-full h-2.5 w-32 hidden md:block overflow-hidden">
+                  <div class="bg-green-500 h-2.5 rounded-full" style="width: 25%"></div>
+                </div>
+                <span class="text-xs font-bold text-slate-500 hidden md:block">25% Selesai</span>
+            </div>
+            <a href="dashboard.html" class="w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold flex items-center justify-center text-sm border-2 border-primary-200 hover:bg-primary-200 transition">
+                HS
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex overflow-hidden">
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="w-80 bg-white border-r border-slate-200 overflow-y-auto hidden lg:block shrink-0 shadow-[4px_0_24px_rgba(0,0,0,0.02)] z-10">
+            <div class="p-6">
+                <h3 class="font-bold text-slate-800 uppercase tracking-wider text-xs mb-4">Daftar Isi Materi</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="lesson.html" class="block px-3 py-3 bg-primary-50 text-primary-700 font-medium rounded-lg border border-primary-200 flex items-center justify-between shadow-sm">
+                            <span class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                1. Pengenalan HTML5
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-3 text-slate-600 hover:bg-slate-50 font-medium rounded-lg flex items-center justify-between group transition">
+                            <span class="flex items-center gap-2">
+                                <div class="w-5 h-5 rounded-full border-2 border-slate-300 group-hover:border-slate-400"></div>
+                                2. Paragraf & Heading
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="flex-1 overflow-y-auto bg-slate-50 relative pb-28 border-l border-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 py-10">
+                
+                <div class="mb-4 inline-flex items-center gap-2 text-primary-700 font-bold text-xs uppercase tracking-wider bg-primary-100 px-3 py-1.5 rounded-full border border-primary-200 shadow-sm">
+                    Materi Inti
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-8 tracking-tight">1. Pengenalan Struktur File HTML5</h1>
+
+                <!-- Video Dummy Player -->
+                <div class="w-full aspect-video bg-slate-900 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden mb-10 border border-slate-800 group">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Code Background" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-900/90 to-blue-900/40"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-16 h-16 sm:w-20 sm:h-20 bg-primary-600 text-white rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.7)] group-hover:scale-110 group-hover:bg-primary-500 transition-all duration-300">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <div class="absolute bottom-4 left-4 text-white font-medium z-10 flex items-center gap-2 bg-slate-900/60 backdrop-blur px-3 py-1.5 rounded border border-slate-700">
+                        <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                        HTML dari Nol - 10:24
+                    </div>
+                </div>
+
+                <!-- Theory Text Content -->
+                <div class="prose prose-slate max-w-none mb-12 prose-headings:font-bold prose-p:text-slate-700 prose-a:text-primary-600">
+                    <p class="text-lg leading-relaxed mb-6 font-medium">
+                        HTML (<span class="text-primary-600">HyperText Markup Language</span>) adalah kerangka dasar dari setiap website. Berfungsi ibarat "tulang" manusia, HTML memberitahu browser bagaimana cara menampilkan struktur halaman dengan mendefinisikan elemen-elemen seperti paragraf, judul, gambar, dan formulir.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 mt-10">Struktur Wajib File HTML</h3>
+                    <p class="text-slate-700 mb-6">Setiap file HTML yang valid menurut standar HTML5 harus memiliki deklarasi `DOCTYPE` beserta blok utama `html`, `head`, dan `body`.</p>
+                    
+                    <div class="bg-[#0d1117] rounded-xl p-5 sm:p-6 shadow-lg mb-8 text-sm sm:text-base font-mono overflow-x-auto border border-slate-800">
+                        <div class="text-slate-500 mb-3 italic">/* Contoh struktur kerangka HTML5 murni */</div>
+                        <div class="text-blue-400">&lt;!DOCTYPE html&gt;</div>
+                        <div class="text-blue-400">&lt;<span class="text-pink-400">html</span><span class="text-green-300"> lang</span><span class="text-blue-300">="id"</span>&gt;</div>
+                        <div class="ml-4 sm:ml-6 text-blue-400">&lt;<span class="text-pink-400">head</span>&gt;</div>
+                        <div class="ml-8 sm:ml-12 text-slate-500 italic">&lt;!-- Meta data tidak terlihat di layar user --&gt;</div>
+                        <div class="ml-8 sm:ml-12 text-blue-400">&lt;<span class="text-pink-400">title</span>&gt;<span class="text-yellow-300">Halaman Pertama</span>&lt;/<span class="text-pink-400">title</span>&gt;</div>
+                        <div class="ml-4 sm:ml-6 text-blue-400">&lt;/<span class="text-pink-400">head</span>&gt;</div>
+                        <div class="ml-4 sm:ml-6 text-blue-400">&lt;<span class="text-pink-400">body</span>&gt;</div>
+                        <div class="ml-8 sm:ml-12 text-slate-500 italic">&lt;!-- Konten yang akan muncul di layar --&gt;</div>
+                        <div class="ml-8 sm:ml-12 text-blue-400">&lt;<span class="text-pink-400">h1</span>&gt;<span class="text-yellow-300">Halo Calon Developer!</span>&lt;/<span class="text-pink-400">h1</span>&gt;</div>
+                        <div class="ml-4 sm:ml-6 text-blue-400">&lt;/<span class="text-pink-400">body</span>&gt;</div>
+                        <div class="text-blue-400">&lt;/<span class="text-pink-400">html</span>&gt;</div>
+                    </div>
+                </div>
+
+                <!-- Latihan Teks Box (As per user request text instruction) -->
+                <div class="bg-white rounded-2xl border border-primary-200 shadow-[0_8px_30px_rgb(59,130,246,0.12)] p-6 sm:p-8 mb-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary-50 to-white rounded-bl-full -z-10 blur-xl"></div>
+                    <div class="flex items-center gap-3 mb-6 border-b border-primary-100 pb-4">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Penugasan Praktek</h3>
+                            <p class="text-sm text-slate-500">Persiapkan editor di komputermu sendiri!</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-slate-700 mb-6 font-medium">Buka teks editor favoritmu (misal: Visual Studio Code, Sublime Text, atau sekadar Notepad) dan ikutilah instruksi di bawah ini:</p>
+                    
+                    <div class="bg-slate-50 rounded-xl border border-slate-200 p-5">
+                        <ol class="list-decimal pl-5 space-y-4 text-slate-700 font-medium marker:text-primary-600 marker:font-bold">
+                            <li>Buat sebuah file baru dan simpan dengan nama <code class="bg-white text-pink-600 px-2 py-1 rounded shadow-sm border border-slate-200 text-sm font-mono tracking-tight font-bold">tugasku.html</code></li>
+                            <li>Ketik ulang (jangan menyalin) struktur <code class="bg-white text-pink-600 px-2 py-1 rounded shadow-sm border border-slate-200 text-sm font-mono tracking-tight font-bold">html</code> dasar yang telah dijelaskan di materi atas.</li>
+                            <li>Isi bagian <code class="bg-white text-pink-600 px-2 py-1 rounded shadow-sm border border-slate-200 text-sm font-mono tracking-tight font-bold">&lt;title&gt;</code> dengan kalimat <em>"Web Pertamamu"</em>.</li>
+                            <li>Buka file tersebut menggunakan browser (klik dua kali pada file <code class="font-mono text-sm">tugasku.html</code>), lalu lihat tab atas browser-mu! Anda akan melihat judul yang Anda tulis.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom fixed navigation toolbar -->
+            <div class="fixed bottom-0 left-0 lg:left-80 right-0 bg-white/90 backdrop-blur border-t border-slate-200 p-4 shrink-0 flex items-center justify-between z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.03)]">
+                <button class="px-5 py-2.5 text-slate-400 font-medium rounded-lg flex items-center gap-2 cursor-not-allowed">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="hidden sm:inline">Sebelumnya</span>
+                </button>
+                <a href="#" class="px-6 py-2.5 bg-primary-600 text-white font-medium hover:bg-primary-700 rounded-lg shadow-lg hover:shadow-primary-500/30 transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+                    Tandai Selesai & Lanjut
+                    <svg class="w-4 h-4 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ku - Webdev Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } } } }
+      }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 relative z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-2 group">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-600 to-blue-400 flex items-center text-white justify-center shadow-md transform group-hover:scale-105 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                </a>
+                
+                <!-- Links -->
+                <div class="hidden sm:flex space-x-8">
+                    <a href="dashboard.html" class="px-1 pt-1 border-b-2 border-primary-600 text-sm font-semibold text-primary-600">Ikhtisar</a>
+                    <a href="course.html" class="px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-900 transition mb-1">Semua Kelas</a>
+                </div>
+
+                <!-- Profile Dropdown -->
+                <div class="flex items-center gap-4">
+                    <div class="hidden sm:block text-right">
+                        <div class="text-sm font-bold text-slate-800">Siswa Teladan</div>
+                        <div class="text-xs text-slate-500 font-medium tracking-wide">Pelajar HTML</div>
+                    </div>
+                    <button class="flex text-sm border-2 border-primary-100 rounded-full focus:outline-none focus:border-primary-300 transition hover:shadow-md">
+                        <img class="h-10 w-10 rounded-full object-cover" src="https://ui-avatars.com/api/?name=Siswa+Teladan&background=e0f2fe&color=0284c7&bold=true" alt="Profile">
+                    </button>
+                    <a href="../index.html" class="ml-2 text-slate-400 hover:text-red-500 transition border-l border-slate-200 pl-4" title="Logout">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- Welcome Card -->
+        <div class="bg-gradient-to-r from-primary-600 to-blue-500 rounded-3xl p-8 sm:p-10 mb-8 shadow-xl text-white relative overflow-hidden group hover:shadow-2xl transition duration-500">
+            <div class="absolute top-0 right-0 p-8 opacity-20 hidden sm:block transform group-hover:scale-110 group-hover:rotate-12 transition duration-700">
+                <svg class="w-56 h-56" fill="currentColor" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 15.835-6.384 2.164-6.388-2.161L4.192 3.143zM15.54 6.66H7.424l.206 2.308h7.704l-.265 2.943H7.838l.206 2.308h6.81l-.403 4.542-3.45.92-3.45-.92-.224-2.51H5.195l.4 4.512 5.405 1.516 5.405-1.516.892-9.972h-7.66l-.206-2.309h8.083l.23-2.58z"/></svg>
+            </div>
+            <div class="relative z-10 w-full sm:w-2/3">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight">Halo, Siswa Teladan! 👋</h1>
+                <p class="text-blue-100 text-lg sm:text-xl font-medium mb-8 leading-relaxed">Mari lanjutkan belajarmu hari ini. Kamu tinggal sedikit lagi menyelesaikan modul HTML Dasar.</p>
+                <div>
+                    <a href="lesson.html" class="inline-flex items-center gap-2 bg-white text-primary-700 font-bold px-6 py-3.5 rounded-xl shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:bg-slate-50 transition transform hover:-translate-y-1">
+                        Lanjut Belajar
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Left Column: Courses -->
+            <div class="lg:col-span-2 space-y-8">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Kelas Berjalan Saya
+                    </h2>
+
+                    <!-- Course Item -->
+                    <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-lg transition duration-300 group">
+                        <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                            <div class="w-20 h-20 bg-orange-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-orange-600 group-hover:scale-110 transition duration-300">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 15.835-6.384 2.164-6.388-2.161L4.192 3.143zm12.396 3.518H8.846l.206 2.308h7.32l-.568 6.34-3.804 1.056-3.808-1.056-.25-2.776H5.808l.43 4.887 5.762 1.621 5.76-1.621 1.01-11.23h-2.182l-.001.47z"/></svg>
+                            </div>
+                            <div class="flex-1 w-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary-600 transition">HTML Dasar untuk Front-End</h3>
+                                </div>
+                                <p class="text-slate-500 text-sm mb-4 font-medium">Berdasar V1.0 &bull; 4 Pelajaran Tersedia</p>
+                                
+                                <div class="flex items-center gap-4">
+                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden shadow-inner">
+                                        <div class="bg-gradient-to-r from-green-400 to-green-500 h-full rounded-full w-1/4 shadow"></div>
+                                    </div>
+                                    <span class="text-sm font-extrabold text-slate-700 w-12 text-right">25%</span>
+                                </div>
+                            </div>
+                            <a href="lesson.html" class="mt-4 sm:mt-0 px-6 py-3 bg-primary-50 text-primary-700 font-bold rounded-xl text-sm border border-primary-200 hover:bg-primary-600 hover:text-white transition shadow-sm w-full sm:w-auto text-center shrink-0">
+                                Lanjutkan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <div class="space-y-8">
+                <!-- Stats Box -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                        Statistik Belajarmu
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center hover:bg-white hover:shadow-md hover:border-slate-200 transition">
+                            <div class="text-4xl font-black text-slate-900 mb-1">1</div>
+                            <div class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-widest">Pelajaran Selesai</div>
+                        </div>
+                        <div class="bg-primary-50 p-5 rounded-xl border border-primary-100 text-center hover:bg-white hover:shadow-md hover:border-primary-200 transition">
+                            <div class="text-4xl font-black text-primary-600 mb-1">0</div>
+                            <div class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-widest">Sertifikat</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates -->
+                <div class="bg-slate-900 rounded-3xl p-8 shadow-xl text-white relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-500 rounded-full opacity-20 filter blur-3xl group-hover:opacity-30 transition duration-500"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary-600 rounded-full opacity-20 filter blur-3xl group-hover:opacity-30 transition duration-500"></div>
+                    
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-slate-800 rounded-full flex items-center justify-center mb-6 border border-slate-700 shadow-inner group-hover:scale-110 transition transform duration-300">
+                            <span class="text-3xl">🏆</span>
+                        </div>
+                        <h4 class="font-extrabold text-xl mb-3 tracking-wide">Pencapaianmu</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-medium">Selesaikan modul HTML Dasar & CSS Layouting untuk membuka ujian akhir & membawa pulang sertifikat kelulusan emas.</p>
+                        <button disabled class="w-full py-3.5 bg-slate-800 text-slate-500 rounded-xl font-bold text-sm border border-slate-700 cursor-not-allowed uppercase tracking-wider">
+                            Penuhi Syarat Dulu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

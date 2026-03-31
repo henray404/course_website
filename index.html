@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webdev Mastery - Belajar Web Programming</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-600 to-blue-400 flex items-center text-white justify-center shadow-lg transform group-hover:scale-105 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-slate-900 group-hover:text-primary-600 transition">Webdev<span class="text-primary-600">.Mastery</span></span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary-600 font-medium border-b-2 border-primary-600 pb-1">Home</a>
+                    <a href="pages/course.html" class="text-slate-600 hover:text-primary-600 font-medium transition">Course</a>
+                    <a href="pages/dashboard.html" class="text-slate-600 hover:text-primary-600 font-medium transition">Dashboard</a>
+                    <span class="text-slate-400 font-medium cursor-not-allowed text-sm bg-slate-100 px-2 py-1 rounded">Forum (V5.0)</span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="pages/login.html" class="text-slate-600 hover:text-primary-600 font-medium transition">Login</a>
+                    <a href="pages/register.html" class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md shadow-primary-500/30">Daftar Sekarang</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary-600 focus:outline-none p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 text-primary-600 font-medium bg-primary-50 rounded-lg">Home</a>
+                <a href="pages/course.html" class="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">Course</a>
+                <a href="pages/dashboard.html" class="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">Dashboard</a>
+                <div class="pt-4 mt-4 border-t border-slate-100 flex flex-col space-y-3">
+                    <a href="pages/login.html" class="block text-center px-4 py-3 text-slate-600 font-medium border border-slate-200 rounded-xl hover:bg-slate-50">Login</a>
+                    <a href="pages/register.html" class="block text-center px-4 py-3 bg-primary-600 text-white font-medium rounded-xl shadow-md shadow-primary-500/30">Daftar Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Background Decorations -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-100 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-200 opacity-50 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-2xl text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6 border border-primary-200 shadow-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-primary-600"></span>
+                        V1.0 HTML & CSS Edition
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Kuasai <span class="text-gradient">Web Programming</span> Dari Nol
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
+                        Platform e-learning interaktif untuk siswa, mahasiswa, dan pemula. Pelajari dasar fondasi web modern secara terstruktur tanpa hambatan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="pages/course.html" class="px-8 py-4 rounded-full bg-primary-600 text-white font-semibold text-lg hover:bg-primary-700 hover:-translate-y-1 transition transform shadow-lg shadow-primary-500/40 flex items-center justify-center gap-2">
+                            Mulai Belajar
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        <a href="#features" class="px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold text-lg hover:bg-slate-50 hover:-translate-y-1 transition transform shadow-sm flex items-center justify-center">
+                            Lihat Kurikulum
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500 font-medium">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-white pointer-events-none" src="https://ui-avatars.com/api/?name=Andi+S&background=random" alt="User">
+                            <img class="w-10 h-10 rounded-full border-2 border-white pointer-events-none" src="https://ui-avatars.com/api/?name=Budi+W&background=random" alt="User">
+                            <img class="w-10 h-10 rounded-full border-2 border-white pointer-events-none" src="https://ui-avatars.com/api/?name=Cindy+L&background=random" alt="User">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs text-slate-500 font-bold">+1k</div>
+                        </div>
+                        <p>Bergabung bersama 1,000+ pelajar lainnya</p>
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="relative mx-auto w-full max-w-lg lg:max-w-none animate-float">
+                    <div class="relative rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl overflow-hidden aspect-[4/3] flex flex-col">
+                        <div class="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <div class="mx-auto text-xs text-slate-400 font-medium flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                webdev.mastery/lesson
+                            </div>
+                        </div>
+                        
+                        <div class="p-6 flex-1 text-sm font-mono text-left bg-slate-900 text-slate-300">
+                            <div class="text-blue-400">&lt;!DOCTYPE html&gt;</div>
+                            <div class="text-blue-400">&lt;<span class="text-pink-400">html</span><span class="text-green-300"> lang</span><span class="text-blue-300">="id"</span>&gt;</div>
+                            <div class="ml-4 text-blue-400">&lt;<span class="text-pink-400">head</span>&gt;</div>
+                            <div class="ml-8 text-slate-500">&lt;!-- Belajar Fondasi --&gt;</div>
+                            <div class="ml-8 text-blue-400">&lt;<span class="text-pink-400">title</span>&gt;<span class="text-yellow-300">Halo Dunia</span>&lt;/<span class="text-pink-400">title</span>&gt;</div>
+                            <div class="ml-4 text-blue-400">&lt;/<span class="text-pink-400">head</span>&gt;</div>
+                            <div class="ml-4 text-blue-400">&lt;<span class="text-pink-400">body</span>&gt;</div>
+                            <div class="relative my-2 p-3 bg-primary-900/40 rounded-lg border border-primary-500/30">
+                                <span class="absolute -top-3 right-4 bg-primary-600 text-white text-xs px-2 py-0.5 rounded shadow">Try it!</span>
+                                <div class="ml-8 text-blue-400">&lt;<span class="text-pink-400">h1</span>&gt;<span class="text-yellow-300">Web Pertama Saya!</span>&lt;/<span class="text-pink-400">h1</span>&gt;</div>
+                            </div>
+                            <div class="ml-4 text-blue-400">&lt;/<span class="text-pink-400">body</span>&gt;</div>
+                            <div class="text-blue-400">&lt;/<span class="text-pink-400">html</span>&gt;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-primary-600 font-bold tracking-wide uppercase mb-2">Kurikulum Kami</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-4">Langkah Tepat Menjadi Front-End Developer</h3>
+                <p class="text-lg text-slate-600">Pelajari pondasi utama web dengan materi yang ramah pemula sebelum melangkah ke JavaScript dan backend.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition duration-300 group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-orange-600 group-hover:scale-110 transition transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 15.835-6.384 2.164-6.388-2.161L4.192 3.143zm12.396 3.518H8.846l.206 2.308h7.32l-.568 6.34-3.804 1.056-3.808-1.056-.25-2.776H5.808l.43 4.887 5.762 1.621 5.76-1.621 1.01-11.23h-2.182l-.001.47z"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-3">HTML Dasar</h4>
+                    <p class="text-slate-600 mb-6">Pahami struktur dokumen web, headings, paragraf, penambahan media, gambar, pembuatan tabel, dan penyediaan form elemen.</p>
+                    <a href="pages/course.html" class="inline-flex items-center gap-2 text-orange-600 font-semibold hover:text-orange-700 transition">
+                        Mulai Modul Ini
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 transition transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 15.835-6.384 2.164-6.388-2.161L4.192 3.143zM15.54 6.66H7.424l.206 2.308h7.704l-.265 2.943H7.838l.206 2.308h6.81l-.403 4.542-3.45.92-3.45-.92-.224-2.51H5.195l.4 4.512 5.405 1.516 5.405-1.516.892-9.972h-7.66l-.206-2.309h8.083l.23-2.58z"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-3">CSS Layouting</h4>
+                    <p class="text-slate-600 mb-6">Mulai perindah tampilan HTML dengan CSS selector, box model, teknik layout flexbox, hingga CSS grid system kekinian.</p>
+                    <a href="pages/course.html" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition">
+                        Mulai Modul Ini
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 max-w-4xl mx-auto flex items-center gap-4 bg-yellow-50 border border-yellow-200 rounded-xl p-5 shadow-sm text-sm text-slate-700">
+                <div class="w-10 h-10 flex-shrink-0 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                    <strong>Pemberitahuan Versi (V1.0)</strong> - Materi Javascript dan PHP/MySQL sedang dipersiapkan untuk Versi 2.0 dan 3.0.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 Webdev Mastery. Tugas Kuliah PWEB TM-4.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
